@@ -32,5 +32,17 @@ namespace UserRegistration
                 return "Valid";
             return "Invalid";
         }
+        public string ValidateEmails(string[] email)
+        {
+            for (int i = 0; i < email.Length; i++)
+            {
+                string mails = email[i];
+                if (Regex.IsMatch(mails, EMAIL))
+                    return "Valid";
+                else
+                    return "Invalid";
+            }
+            return "";
+        }
     }
 }
