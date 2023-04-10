@@ -33,5 +33,12 @@ namespace UserRegistrationTest
             string result = user.ValidateMobileNumber(number);
             Assert.AreEqual(result, "Valid");
         }
+        [Test]
+        public void EnteredPassword_WhenAnalyze_ShouldReturn_Valid()
+        {
+            string passwd = "Asdkf1234";
+            string result = user.ValidatePassword(passwd);
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
