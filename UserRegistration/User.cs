@@ -7,7 +7,7 @@ namespace UserRegistration
         public const string NAME = "^[A-Z]{1}[a-z]{2,}$";
         public const string EMAIL = "^[a-zA-Z]{3,}[.]{0,1}[a-zA-Z]{0,}[@]{1}[a-zA-Z]{2,}[.]{1}[a-zA-Z]{2,}[.]{0,1}[a-zA-Z]{0,2}$";
         public const string MOBILE_NUMBER = "^[0-9]{2}\\s[6-9]{1}[0-9]{9}$";
-        public const string PASSWORD = "^[A-Z]{1,}[0-9]{1,}[a-z]{3,}$";
+        public const string PASSWORD = "^[A-Z]{1,}[a-z]{3,}[~!@#$&]{1,}[0-9]{1,}$";
         public string ValidateName(string name)
         {
             if (Regex.IsMatch(name, NAME))
