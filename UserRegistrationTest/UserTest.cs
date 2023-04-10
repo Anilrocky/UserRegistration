@@ -12,5 +12,12 @@ namespace UserRegistrationTest
             string result = user.ValidateName(firstName);
             Assert.AreEqual(result, "Valid");
         }
+        [Test]
+        public void EnteredLastName_WhenAnalyze_ShouldReturn_Valid()
+        {
+            string lastName = "Kumar";
+            string result = user.ValidateName(lastName);
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
