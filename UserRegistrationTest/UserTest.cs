@@ -1,11 +1,16 @@
+using UserRegistration;
+
 namespace UserRegistrationTest
 {
     public class Tests
-    {     
+    {
+        User user = new User();
         [Test]
-        public void Test1()
+        public void EnteredFirstName_WhenAnalyze_ShouldReturn_Valid()
         {
-            Assert.Pass();
+            string firstName = "Anil";
+            string result = user.ValidateName(firstName);
+            Assert.AreEqual(result, "Valid");
         }
     }
 }
