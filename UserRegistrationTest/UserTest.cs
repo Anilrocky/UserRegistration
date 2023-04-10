@@ -26,5 +26,12 @@ namespace UserRegistrationTest
             string result = user.ValidateEmail(eMail);
             Assert.AreEqual(result, "Valid");
         }
+        [Test]
+        public void EnteredMobileNumber_WhenAnalyze_ShouldReturn_Valid()
+        {
+            string number = "91 6789054321";
+            string result = user.ValidateMobileNumber(number);
+            Assert.AreEqual(result, "Valid");
+        }
     }
 }
